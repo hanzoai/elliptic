@@ -1,0 +1,6 @@
+# elliptic — the library's own mocha suite (226 cases, the curve/ECDSA/EdDSA
+# vectors). Invoked directly: `npm test` wraps it in istanbul 0.4, which cannot
+# instrument on any current Node.
+test:
+  - name: mocha
+    run: npm ci --no-audit --no-fund && npx mocha --reporter=spec test/index.js
